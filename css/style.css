@@ -1,0 +1,77 @@
+@import './variables.css';
+
+/* global rules */
+
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+h1 {
+    font-size: calc(35px * 0.0625px);
+}
+
+h2{
+    font-size: calc(40px * 0.0625px);
+    text-transform: capitalize;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navigation{
+    width: 100%;
+    height: 50px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    overflow-y: hidden;
+}
+
+.navigation ul{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navigation .nav-items{
+    width: 40%;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-items a{
+    color: #000;
+}
+
+.pill{
+    width: 150px;
+    height: 30px;
+    background-color: var(--azul-deep);
+    border-radius: 30px;
+    text-align: center;
+    color: var(--azul-deep-nopac);
+    padding-top: 5px;
+}
+/* ---------------- *
+
