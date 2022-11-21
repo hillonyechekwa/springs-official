@@ -4,6 +4,8 @@
 
 const contentNav = document.querySelectorAll(".card-one li")
 const content = document.querySelectorAll(".card-two p")
+
+const currentYear = document.getElementById("year")
 //vars
 
 let navItemOne = contentNav[0]
@@ -75,3 +77,5 @@ navItemSix.addEventListener('click', function() {
     contentOne.classList.add("hide");
 })
 
+var getCurrentYear = new Date().getFullYear()
+currentYear.innerHTML = getCurrentYear
