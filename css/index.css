@@ -1,5 +1,8 @@
 @import './variables.css';
 
+
+
+
 .index-hero{
     width: 100vw;
     height: 100vh;
@@ -9,12 +12,27 @@
     position: relative;
 }
 
+.index-hero #blue-accent{
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 400px;
+    height: 700px;
+    /* border: 2px solid black; */
+}
+
+.index-hero #blue-accent rect{
+    fill: var(--azul-section-surface)
+}
+
 .index-hero article{
     height: 60%;
     display: flex;
     flex-flow: column;
     justify-content: space-around;
     align-items: flex-start;
+    position: relative;
+    left: -100px;
 }
 
 .index-hero article h1{
@@ -36,30 +54,29 @@
     font-size: 20px;
     text-transform: capitalize;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     position: relative;
+    z-index: -1;
 }
 
-.index-hero article button #arrow{
-    width: 50px;
-    height: 50px;
+.img-hero-wrapper{
+    width: 350px;
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: -500px;
+    z-index: 2;
+}
+
+.img-hero-wrapper svg{
+    border-radius: 20px;
     position: absolute;
-    top:10px;
-    left: 75%;
-    transform: rotate(-50deg);
+    top: 20%;
+    left: 50%;
 }
 
-.index-hero article button #arrow path{
-    fill: white;
-}
 
-.index-hero .image-svg{
-    border-radius: 15px;
-    width: 300px;
-    height: 480px;
-    position: relative;
-}
 
 .achievements{
     width: 100%;
@@ -423,4 +440,174 @@
     height: 100%;
 }
 
+.scrolled{}
 
+
+
+/* -------------about styles----------- */
+.about-hero{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.about-hero h1{
+    inline-size: 320px;
+    word-wrap: break-word;
+}
+
+.about-hero #hero-grid div{
+    width: 100px;
+    height: 100px;
+    background-color: var(--azul-section-surface);
+    border-radius: 15px;
+}
+
+.about-hero #hero-grid .grid-item-one{
+    width: 150px;
+    height: 220px;
+    justify-self: right;
+    grid-area: a;
+}
+.about-hero #hero-grid .grid-item-two{
+    width: 180px;
+    height: 120px;
+    grid-area: b;
+}
+.about-hero #hero-grid .grid-item-three{
+    width: 180px;
+    height: 200px;
+    align-self: center;
+    grid-area: c;
+}
+.about-hero #hero-grid .grid-item-four{
+    width: 180px;
+    height: 230px;
+    justify-self: right;
+    grid-area: d;
+}
+.about-hero #hero-grid .grid-item-five{
+    width: 180px;
+    height: 230px;
+    grid-area: e;
+}
+
+
+.about-hero #hero-grid{
+    width: 420px;
+    height: 95%;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-areas: "a b"
+                         "a c"
+                         "d c"
+                         "d e"
+                         ". e";
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 3px;
+    column-gap: 15px;
+    /* /* justify-content: space-evenly; */
+    /* align-items: start; */
+}
+
+.about-hero article{
+    position: relative;
+    top: 100px;
+    left: 50px;
+}
+
+.about-hero article h1{
+    margin-top: 30px;
+}
+
+.about-content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-content .about-content-img{
+    width: 500px;
+    height: 250px;
+    border-radius: 15px;
+    background-color: var(--azul-section-surface);
+    position: relative;
+    top: -80px;
+}
+
+.about-content article{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.about-content article p{
+    font-size: 13px;
+    inline-size: 500px;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.about-content article .pill{
+    color: var(--rouge-full);
+}
+
+
+/* ---------services - styles -------------- */
+.services-hero{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.services-hero article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 40%;
+}
+
+.services-hero article p{
+    font-size: 13px;
+    line-height: var(--line-sm);
+    inline-size: 300px;
+    word-wrap: break-word;
+}
+
+.sevices-hero .services-grid div{
+    background-color: var(--azul-section-surface);
+}
+
+.services-hero .services-grid .sg-item-one{
+    width: 200px;
+    border-radius: 10px;
+}
+.services-hero .services-grid .sg-item-two{
+    width: 100px;
+    border-radius: 10px;
+}
+.services-hero .services-grid .sg-item-three{
+    width: 80px;
+    border-radius: 10px;
+}
+
+
+
+.services-hero .services-grid{
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: ". a"
+                         "b c";
+}
